@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+nav {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url('../images/IndexBG.PNG');
+    background-size: cover;      /* 讓圖片完全覆蓋區塊 */
+    background-position: center; /* 置中背景圖 */
+    background-repeat: no-repeat;
+    color: rgb(0, 0, 0);                /* 文字顏色改白，確保可讀 */
+    padding: 250px 20px;         /* 上下內距 */
+    text-align: center;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.project {
+    width: 250px;
+    margin: 15px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+footer {
+    background: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.about-header {
+    text-align: center;
+}
+
+.avatar {
+    margin: 20px auto; /* 水平置中 */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #333;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.tag {
+    color: #5e717e;
+    font-weight: bold;
+}
+/* 下拉選單容器 */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+/* 下拉內容：預設隱藏 */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* 下拉內容連結樣式 */
+.dropdown-content a {
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* 滑鼠移到 dropdown 時顯示內容 */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* 滑鼠移上 dropdown 選單時背景變色 */
+.dropdown-content a:hover {
+  background-color: #666;
+}
+
+
+
+

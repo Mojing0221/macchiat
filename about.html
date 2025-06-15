@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於我</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* 關於我置中 */
+    .about-header {
+      text-align: center;
+    }
+
+    /* 頭像框 */
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 20px auto;
+      border: 3px solid #333;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* 輪播區 */
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+      max-width: 960px;
+      margin: 40px auto;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .carousel-group {
+      display: flex;
+      justify-content: space-between;
+      min-width: 100%;
+      gap: 20px;
+    }
+
+    .carousel-group img {
+      width: calc(33.333% - 14px);
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+      <nav>
+            <a href="index.html">首頁</a>
+            <a href="about.html">關於我</a>
+            <a href="projects.html">作品</a>
+            <a href="contact.html">聯絡我</a>
+      </nav>
+  </header>
+
+  <main class="container">
+    <div class="about-header">
+      <h1>-關於我-</h1>
+
+      <!-- 頭像 -->
+      <div class="avatar">
+        <img src="images/頭貼.jpg" alt="頭像">
+      </div>
+    </div>
+
+    <h2>自介</h2>
+    <p>疫情。</p>
+    <p>來財來財來財。</p>
+
+     <h2>技能</h2>
+      <ul>
+      <li>2D美術</li>
+      <li>3D建模</li>
+      <li>故事編寫</li>
+      <li>烘焙</li>
+      </ul>
+
+    
+  </main>
+
+  <footer>
+    <p>© 2025 疫情 | 
+      <a href="https://www.instagram.com/macchiat0_1211/?__pwa=1" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </p>
+  </footer>
+
+  <script>
+    // 輪播功能
+    const track = document.getElementById('carouselTrack');
+    const groups = track.children.length;
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % groups;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }, 4000);
+  </script>
+</body>
+</html>
